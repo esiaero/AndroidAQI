@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true">
-        <shape android:shape="oval">
-            <solid android:color="@color/colorPrimaryDark"/>
-            <size android:width="40dp" android:height="40dp"/>
-        </shape>
-    </item>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:innerRadius="0dp"
+    android:shape="ring"
+    android:thicknessRatio="3"
+    android:useLevel="false" >
 
-    <item>
-        <shape android:shape="oval">
-            <solid android:color="@color/colorPrimary"/>
-            <size android:width="40dp" android:height="40dp"/>
-        </shape>
-    </item>
-</selector>
+    <solid android:color="@android:color/transparent" />
+
+    <size android:width="100dp"
+        android:height="100dp"/>
+
+    <stroke android:width="20dp"
+        android:color="@color/colorPrimary"/>
+
+</shape>

@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/air_quality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="30"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+    <Button
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/save"
+        android:textSize="35sp"
+        android:textColor="@color/colorAccent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    <Button
+        android:id="@+id/ignore"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/ignore"
+        android:textColor="@color/danger"
+        android:textSize="35sp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    </LinearLayout>
+
+</LinearLayout>
