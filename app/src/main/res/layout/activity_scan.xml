@@ -7,11 +7,23 @@
     android:gravity="center_vertical">
 
     <TextView
+        android:id="@+id/nearest_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="San Francisco"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform" />
+
+    <TextView
         android:id="@+id/air_quality"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:typeface="monospace"
         tools:text="30"
         android:textSize="50sp"
+        android:textColor="@color/offwhite"
         android:gravity="center"
         android:textStyle="bold"
         android:autoSizeTextType="uniform" />

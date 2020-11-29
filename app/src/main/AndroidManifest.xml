@@ -27,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name="SaveScan" />
+        <activity android:name="History" />
     </application>
 
 </manifest>

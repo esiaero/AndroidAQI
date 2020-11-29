@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.RequestFuture
 import com.android.volley.toolbox.Volley
@@ -16,7 +15,7 @@ import java.util.concurrent.TimeoutException
 
 class MainActivity : AppCompatActivity() {
     private val tag = "MainActivity"
-    private val key = "API KEY HERE"
+    private val key = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
             val jsonRequest = JsonObjectRequest(Request.Method.GET, url, JSONObject(), future, future)
             queue.add(jsonRequest)
-            val t = Thread(Runnable{
+            Thread(Runnable{
                 try {
                     val response = future.get(30, TimeUnit.SECONDS)
                     val status = response.getString("status")
@@ -59,7 +58,11 @@ class MainActivity : AppCompatActivity() {
                     e.printStackTrace()
                 }
             }).start()
+        }
 
+        history.setOnClickListener{
+            val intent = Intent(this, History::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -1,8 +1,8 @@
 package com.example.airquality
 
 data class AQSearch (
-    val aq : Int = 0,
-    val location : String = "",
+    val aq : String = "0",
+    val city : String = "",
     val date : String = "",
-    val uuid : String = ""
+    var uuid : String = ""
 )
