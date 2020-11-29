@@ -1,2 +1,3 @@
 11-26-20: Stack Overflow learning about tunable paramters for drawing         https://stackoverflow.com/questions/7892169/what-kind-of-connection-exists-between-innerradiusratio-and-thicknessratio-from
 11-26-20: Stack Overflow dealing with Volley async/sync				https://stackoverflow.com/questions/16904741/can-i-do-a-synchronous-request-with-volley
+11-28-20: Stack Overflow learning to use GPS					http://stackoverflow.com/questions/2227292/how-to-get-latitude-and-longitude-of-the-mobile-device-in-android
