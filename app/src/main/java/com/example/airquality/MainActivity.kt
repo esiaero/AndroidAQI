@@ -9,7 +9,6 @@ import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Looper
 import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -21,7 +20,6 @@ import com.android.volley.toolbox.Volley
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
-import com.google.android.gms.location.LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY
 import com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY
 import com.google.android.gms.tasks.CancellationTokenSource
 import kotlinx.android.synthetic.main.activity_main.*
@@ -85,8 +83,6 @@ class MainActivity : AppCompatActivity() {
         val lat = location.latitude
         val lon = location.longitude
         val url = "https://api.airvisual.com/v2/nearest_city?lat=$lat&lon=$lon&key=$key"
-        Log.e(tag, "LAT: $lat")
-        Log.e(tag, "LON: $lon")
         val queue = Volley.newRequestQueue(this)
         val future : RequestFuture<JSONObject> = RequestFuture.newFuture()
         val jsonRequest = JsonObjectRequest(Request.Method.GET, url, JSONObject(), future, future)
